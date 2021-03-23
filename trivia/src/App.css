@@ -1,0 +1,43 @@
+
+.App-header {
+  font-size: 45px;
+  margin-bottom: 100px;
+  background-color: cornflowerblue;
+  padding-bottom: 50px;
+}
+
+
+.trivia-container {
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 800px;
+
+}
+
+.question-container {
+  border: 1px dotted black;
+  height: auto;
+  width: 605px;
+}
+
+.bottom-row {
+  border: 1px dotted black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 605px;
+  height: auto;
+}
+
+.user-info {
+  border-right: 1px dotted black;
+  height: auto;
+  width: 299px;
+  text-align: center;
+}
+
+.answer-sheet {
+  border-left: 1px dotted black;
+  height: 300px;
+  width: 299px;
+  text-align: center;
+}
