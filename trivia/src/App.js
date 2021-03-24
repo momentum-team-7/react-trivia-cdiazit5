@@ -27,13 +27,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">Trivia Night</header>
-
       <div className='trivia-container'>
-
-        <div>
           {selectedCategory ? (
             <Questions 
             category={selectedCategory}
+            handleGoBack={() => setSelectedCategory(null)}
             />
             ) : (
               <Categories 
@@ -41,17 +39,16 @@ function App() {
                 setSelectedCategory={setSelectedCategory}  
               />
           )}
-        </div>
 
-        <div className='bottom-row'>
+        {/* <div className='bottom-row'>
           <div className='user-info'>
             <h3>User-info</h3>
           </div>
           <div className='answer-sheet'>
             <h3>Answer Choices</h3>
             {/* <Questions /> */}
-          </div>
-        </div>
+          {/* </div>
+        </div> */}
       </div>
 
 

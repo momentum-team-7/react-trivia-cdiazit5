@@ -1,11 +1,36 @@
-
+* {
+  font-family: 'Prompt', sans-serif;
+}
 .App-header {
   font-size: 45px;
   margin-bottom: 100px;
   background-color: cornflowerblue;
   padding-bottom: 50px;
+  text-align: center;
+  border-bottom: ;
 }
 
+.categories-header {
+  /* padding-left: 15px; */
+  padding-bottom: 5px;
+  margin-bottom: 35px;
+  font-size: 50px;
+  text-align: center;
+  border-bottom: solid black;
+  border-radius: 15px;
+  height: auto;
+  width: auto;
+}
+
+.questions-header {
+  /* padding-left: 15px; */
+  padding-bottom: 5px;
+  margin-bottom: 35px;
+  font-size: 50px;
+  text-align: center;
+  border-bottom: solid black;
+  border-radius: 15px;
+}
 
 .trivia-container {
   margin-left: 7px;
@@ -14,10 +39,21 @@
 
 }
 
-.categories-container {
-  border: 1px dotted black;
+/* .game-window {
+  align-content: center;
+  border: 5px outset black;
+  border-radius: 15px;
   height: auto;
-  width: 605px;
+  width: 800px;
+} */
+
+.categories-container {
+  border: 5px outset black;
+  border-radius: 15px;
+  height: 700px;
+  width: 800px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .bottom-row {
@@ -42,8 +78,18 @@
   text-align: center;
 }
 
-button {
-  min-width: 15px;
-  min-height: 10px;
 
+li {
+  padding-bottom: 15px;
+}
+
+#back-button {
+  align-self: center;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.scroll-box {
+  height: 550px;
+  overflow: scroll;
 }

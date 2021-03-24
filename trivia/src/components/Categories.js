@@ -1,10 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function Categories({ categories, setSelectedCategory }) {
     // const [selectedCategory, setSelectedCategory] = useState(null)
     return (
         <div className='categories-container'>
-            <h3>Categories</h3>
+            <h3 className='categories-header'>Categories</h3>
+            <div className='scroll-box'>
+                <ul className='list-group list-group-flush'>
+                    {categories.map((category, idx) => (
+                        <li key={idx} className="list-group-item">
+                            <button 
+                            className='btn btn-info'
+                            onClick={() => setSelectedCategory(category)}>
+                                {category.name}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            {/* <h3 className='categories-header'>Categories</h3> */}
             {/* <ul>
                 <form>
                     <select onChange={(event) => setSelected(event.target.value)}>
@@ -25,18 +39,6 @@ export default function Categories({ categories, setSelectedCategory }) {
                     />
                 </form>
             </ul> */}
-
-            <ul>
-            {categories.map((category, idx) => (
-                <li key={idx}>
-                    <button 
-                    className='.btn-primary'
-                    onClick={() => setSelectedCategory(category)}>
-                        {category.name}
-                    </button>
-                </li>
-                ))}
-            </ul>
         </div>
     )
 }
