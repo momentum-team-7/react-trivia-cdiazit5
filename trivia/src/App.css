@@ -41,3 +41,9 @@
   width: 299px;
   text-align: center;
 }
+
+button {
+  min-width: 15px;
+  min-height: 10px;
+
+}
