@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import './App.css';
 import axios from 'axios'
 import Categories from './components/Categories'
-import Questions from './components/Questions';
+import Questions from './components/CategoryQuestions';
+import Answers from './components/Answers';
 
 
 
@@ -39,6 +40,8 @@ function App() {
                 setSelectedCategory={setSelectedCategory}  
               />
           )}
+
+          <Answers ></Answers>
 
         {/* <div className='bottom-row'>
           <div className='user-info'>

@@ -5,7 +5,7 @@ export default function Categories({ categories, setSelectedCategory }) {
     return (
         <div className='categories-container'>
             <h3 className='categories-header'>Categories</h3>
-            <div className='scroll-box'>
+            <div className='category-scroll-box'>
                 <ul className='list-group list-group-flush'>
                     {categories.map((category, idx) => (
                         <li key={idx} className="list-group-item">

@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-export default function Questions({ category, handleGoBack }) {
-    const [questions, setQuestions] = useState([])
+export default function CategoryQuestions({ category, handleGoBack }) {
+    const [categoryQuestions, setCategoryQuestions] = useState([])
+    // set selected question
 
     useEffect(() => {
         axios
@@ -17,11 +18,11 @@ export default function Questions({ category, handleGoBack }) {
                     question: dataByCategory.question,
                     id: dataByCategory.id
                 }))
-            setQuestions(data)
+            setCategoryQuestions(data)
             })
     }, [category])
 
-    console.log('QUESTION RENDER:', questions)
+    console.log('QUESTION RENDER:', categoryQuestions)
 
     return (
         <div className='categories-container'>
@@ -31,17 +32,18 @@ export default function Questions({ category, handleGoBack }) {
             type="button" 
             className="btn btn-info"
             onClick={handleGoBack}>
-                Back to Categories
+                <b>Back to Categories</b>
             </button>
-            <ul> 
-                {questions.map((dataByCategory) => (
-                    <li key={dataByCategory.id}> 
-                        {dataByCategory.question}
-                    </li>
-                ))}
-            </ul>
+            <div className='questions-scroll-box'>
+                <ul className='list-group list-group-flush'> 
+                    {categoryQuestions.map((dataByCategory) => (
+                        <li key={dataByCategory.id} className="list-group-item"> 
+                            {dataByCategory.question}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
 
     )
-
 }

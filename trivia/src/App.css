@@ -3,18 +3,19 @@
 }
 .App-header {
   font-size: 45px;
-  margin-bottom: 100px;
-  background-color: cornflowerblue;
-  padding-bottom: 50px;
+  color: #fefbd8;
+  margin-bottom: 45px;
+  background-color: #618685;
+  padding-bottom: 10px;
   text-align: center;
-  border-bottom: ;
+  border-bottom: solid black;
 }
 
 .categories-header {
   /* padding-left: 15px; */
   padding-bottom: 5px;
-  margin-bottom: 35px;
-  font-size: 50px;
+  margin-bottom: 25px;
+  font-size: 35px;
   text-align: center;
   border-bottom: solid black;
   border-radius: 15px;
@@ -25,35 +26,30 @@
 .questions-header {
   /* padding-left: 15px; */
   padding-bottom: 5px;
-  margin-bottom: 35px;
-  font-size: 50px;
+  margin-bottom: 25px;
+  font-size: 25px;
   text-align: center;
   border-bottom: solid black;
   border-radius: 15px;
 }
 
-.trivia-container {
-  margin-left: 7px;
-  margin-right: 7px;
-  width: 800px;
-
-}
-
-/* .game-window {
-  align-content: center;
-  border: 5px outset black;
-  border-radius: 15px;
-  height: auto;
-  width: 800px;
-} */
-
 .categories-container {
-  border: 5px outset black;
+  border: 9px outset #618685;
   border-radius: 15px;
-  height: 700px;
-  width: 800px;
+  height: 650px;
+  width: 450px;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.category-scroll-box {
+  height: 550px;
+  overflow: scroll;
+}
+
+.questions-scroll-box {
+  height: 475px;
+  overflow: scroll;
 }
 
 .bottom-row {
@@ -78,9 +74,17 @@
   text-align: center;
 }
 
+.btn.btn-info {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
 
 li {
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: medium;
+  /* background-color: #80ced6; */
 }
 
 #back-button {
@@ -89,7 +93,15 @@ li {
   margin-left: 20px;
 }
 
-.scroll-box {
-  height: 550px;
-  overflow: scroll;
+
+.trivia-container {
+  display: flex;
 }
+
+/* .game-window {
+  align-content: center;
+  border: 5px outset black;
+  border-radius: 15px;
+  height: auto;
+  width: 800px;
+} */
