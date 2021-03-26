@@ -1,18 +1,24 @@
-import React from 'react'
+import { useState } from 'react'
+import Answers from './Answers'
 
-export default function Question ({ questions }) {
-    
+export default function Question ({ selectedQuestion }) {
+    const [question, setQuestion] = useState()
+
+
+    if (selectedQuestion != null) {
+        return (
+        <div>
+            <p>{selectedQuestion}</p>
+        </div>
+    )}
 
     return (
-        <div className='categories-container'>
-            <h3 className='categories-header'>Answers</h3>
-
+        <div>
+            <p>No Question Selected</p>
         </div>
-
-
-
-
-
-
     )
+
+
+
+
 }

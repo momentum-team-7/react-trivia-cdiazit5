@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import './App.css';
 import axios from 'axios'
 import Categories from './components/Categories'
-import Questions from './components/CategoryQuestions';
-import Answers from './components/Answers';
+import CategoryQuestions from './components/CategoryQuestions';
+import Question from './components/Question'
+// import selectedQuestion from CategoryQuestions
+// import Answers from './components/Answers';
 
 
 
@@ -25,12 +27,12 @@ function App() {
 
   console.log('RENDERING:', categories)
 
-  return (
+  return ( 
     <div className="App">
       <header className="App-header">Trivia Night</header>
       <div className='trivia-container'>
           {selectedCategory ? (
-            <Questions 
+            <CategoryQuestions 
             category={selectedCategory}
             handleGoBack={() => setSelectedCategory(null)}
             />
@@ -41,7 +43,16 @@ function App() {
               />
           )}
 
-          <Answers ></Answers>
+          {/* <div className='answer-container'>
+            <h3 className='categories-header'>Answer Choices</h3>
+            <div className='question-contrainer'>
+            </div> */}
+            {/* <Answer
+            // setSelectedQuestion={this.setSelectedQuestion}
+            // question={this.setSelectedQuestion}
+            ></Answer> */}
+          {/* </div> */}
+
 
         {/* <div className='bottom-row'>
           <div className='user-info'>

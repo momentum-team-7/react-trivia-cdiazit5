@@ -33,7 +33,29 @@
   border-radius: 15px;
 }
 
+.question-container {
+  border: 1px dotted #618685;
+  border-radius: 15px;
+  /* height: 650px;
+  width: 450px; */
+  height: auto;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 9px outset #618685;
+  border-radius: 15px;
+  height: 650px;
+  width: 450px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.answer-container {
   border: 9px outset #618685;
   border-radius: 15px;
   height: 650px;

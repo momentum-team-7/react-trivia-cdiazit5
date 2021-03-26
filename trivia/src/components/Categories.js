@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Categories({ categories, setSelectedCategory }) {
     // const [selectedCategory, setSelectedCategory] = useState(null)
+
     return (
         <div className='categories-container'>
             <h3 className='categories-header'>Categories</h3>
