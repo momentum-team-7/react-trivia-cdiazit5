@@ -6,6 +6,7 @@ import Question from './Question'
 export default function CategoryQuestions({ category, handleGoBack }) {
     const [categoryQuestions, setCategoryQuestions] = useState([])
     const [selectedQuestion, setSelectedQuestion] = useState(null)
+    const [selectedQuestionAnswers, setSelectedQuestionAnswers] = useState(null)
     // set selected question
 
     useEffect(() => {
@@ -22,12 +23,14 @@ export default function CategoryQuestions({ category, handleGoBack }) {
                     question: dataByCategory.question,
                     id: dataByCategory.id
                 }))
+            console.log(data)
             setCategoryQuestions(data)
             })
     }, [category])
 
     console.log('QUESTION RENDER:', categoryQuestions)
     console.log(selectedQuestion)
+
 
     return (
         <div className='flexbox-container'>
@@ -47,6 +50,7 @@ export default function CategoryQuestions({ category, handleGoBack }) {
                                 <button 
                                 className='btn btn-info'
                                 onClick={() => setSelectedQuestion(dataByCategory.question)}
+                                // onClick={() => setSelectedQuestionAnswers(dataByCategory.incorrect_answers)}
                                 >
                                     {dataByCategory.question}
                                 </button>
@@ -60,6 +64,14 @@ export default function CategoryQuestions({ category, handleGoBack }) {
             <Question
             selectedQuestion={selectedQuestion}
             />
+            {/* {categoryQuestions.map((dataByCategory) =>
+                <Question
+                selectedQuestion={selectedQuestion}
+                question ={dataByCategory.question}
+                incorrect_answers={dataByCategory.incorrect_answers}
+                correct_answer={dataByCategory.correct_answer}
+                />
+            )} */}
             </div>
         
         </div>

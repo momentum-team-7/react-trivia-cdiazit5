@@ -1,14 +1,23 @@
 import { useState } from 'react'
 import Answers from './Answers'
 
-export default function Question ({ selectedQuestion }) {
+export default function Question ({ selectedQuestion, correct_answer, incorrect_answers }) {
     const [question, setQuestion] = useState()
 
 
     if (selectedQuestion != null) {
         return (
-        <div className='questiontext-div'>
-            <p>{selectedQuestion}</p>
+        <div>
+            <div className='questiontext-div'>
+                <p className='text'>{selectedQuestion}</p>
+            </div>
+            {/* <div>
+                <Answers
+
+
+
+                />
+            </div> */}
         </div>
     )}
 
