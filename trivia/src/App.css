@@ -21,27 +21,61 @@
   border-radius: 15px;
   height: auto;
   width: auto;
+  margin: auto;
 }
 
 .questions-header {
   /* padding-left: 15px; */
   padding-bottom: 5px;
   margin-bottom: 25px;
+  margin: auto;
   font-size: 25px;
   text-align: center;
   border-bottom: solid black;
   border-radius: 15px;
 }
 
+.select-text {
+  margin: auto;
+}
+
+.flexbox-container {
+  display: flex;
+  width: 1151px;
+  height: auto;
+}
 .question-container {
-  border: 1px dotted #618685;
+  border: 9px outset #618685;
   border-radius: 15px;
-  /* height: 650px;
-  width: 450px; */
-  height: auto;
-  height: auto;
+  height: 650px;
+  width: 450px;
+  /* width: auto; */
+  /* height: auto; */
   margin-left: 5%;
   margin-right: 5%;
+  text-align: center;
+}
+
+.questiontext-div {
+  border: 9px outset #618685;
+  border-radius: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 7%;
+  min-height: 150px;
+  background-color: #fefbd8;
+}
+
+.placeholder-container {
+  border: 9px outset #618685;
+  border-radius: 15px;
+  height: 650px;
+  width: 450px;
+  /* width: auto; */
+  /* height: auto; */
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
 }
 
 .categories-container {
@@ -118,6 +152,7 @@ li {
 
 .trivia-container {
   display: flex;
+  width: auto;
 }
 
 /* .game-window {

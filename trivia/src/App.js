@@ -47,12 +47,11 @@ function App() {
             <h3 className='categories-header'>Answer Choices</h3>
             <div className='question-contrainer'>
             </div> */}
-            {/* <Answer
-            // setSelectedQuestion={this.setSelectedQuestion}
-            // question={this.setSelectedQuestion}
-            ></Answer> */}
-          {/* </div> */}
-
+      <div style={selectedCategory? {display:'none'} : {}} className='placeholder-container'>
+        <div className='questiontext-div'>
+          <h3 className="select-text">Select A Category!</h3>
+        </div>
+      </div>
 
         {/* <div className='bottom-row'>
           <div className='user-info'>
@@ -64,7 +63,6 @@ function App() {
           {/* </div>
         </div> */}
       </div>
-
 
     </div>
   )

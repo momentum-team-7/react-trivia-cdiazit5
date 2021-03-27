@@ -7,14 +7,14 @@ export default function Question ({ selectedQuestion }) {
 
     if (selectedQuestion != null) {
         return (
-        <div>
+        <div className='questiontext-div'>
             <p>{selectedQuestion}</p>
         </div>
     )}
 
     return (
-        <div>
-            <p>No Question Selected</p>
+        <div className='questiontext-div'>
+            <h3 className="select-text">Select a Question!</h3>
         </div>
     )
 
