@@ -133,8 +133,8 @@
 }
 
 .btn.btn-info {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -162,6 +162,14 @@ li {
   margin-bottom: 5%;
   margin-left: 2%;
   margin-right: 2%;
+}
+
+.correct {
+  background-color: chartreuse;
+}
+
+.incorrect {
+  background-color: red;
 }
 
 /* .game-window {

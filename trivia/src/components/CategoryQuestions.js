@@ -5,8 +5,8 @@ import Question from './Question'
 
 export default function CategoryQuestions({ category, handleGoBack }) {
     const [categoryQuestions, setCategoryQuestions] = useState([])
-    const [selectedQuestion, setSelectedQuestion] = useState(null)
-    const [selectedQuestionAnswers, setSelectedQuestionAnswers] = useState(null)
+    // const [selectedQuestion, setSelectedQuestion] = useState(null)
+    // const [selectedQuestionAnswers, setSelectedQuestionAnswers] = useState(null)
     // set selected question
 
     useEffect(() => {
@@ -29,7 +29,7 @@ export default function CategoryQuestions({ category, handleGoBack }) {
     }, [category])
 
     console.log('QUESTION RENDER:', categoryQuestions)
-    console.log(selectedQuestion)
+    // console.log(selectedQuestion)
 
 
     return (
@@ -45,14 +45,19 @@ export default function CategoryQuestions({ category, handleGoBack }) {
                 </button>
                 <div className='questions-scroll-box'>
                     <ul className='list-group list-group-flush'> 
-                        {categoryQuestions.map((dataByCategory) => (
+                        {categoryQuestions.map((dataByCategory, index) => (
                             <li key={dataByCategory.id} className="list-group-item"> 
                                 <button 
                                 className='btn btn-info'
-                                onClick={() => setSelectedQuestion(dataByCategory.question)}
-                                // onClick={() => setSelectedQuestionAnswers(dataByCategory.incorrect_answers)}
+                                // onClick={() => setSelectedQuestion(dataByCategory.question)}
                                 >
-                                    {dataByCategory.question}
+                                    <Question
+                                    key={index}
+                                    question={dataByCategory.question}
+                                    incorrect_answers={dataByCategory.incorrect_answers}
+                                    correct_answer={dataByCategory.correct_answer}
+                                    />
+                                    {/* {dataByCategory.name} */}
                                 </button>
                             </li>
                         ))}
@@ -60,10 +65,10 @@ export default function CategoryQuestions({ category, handleGoBack }) {
                 </div>
             </div>
             
-            <div className='question-container'>
-            <Question
+            {/* <div className='question-container'> */}
+            {/* <Question
             selectedQuestion={selectedQuestion}
-            />
+            /> */}
             {/* {categoryQuestions.map((dataByCategory) =>
                 <Question
                 selectedQuestion={selectedQuestion}
@@ -72,7 +77,7 @@ export default function CategoryQuestions({ category, handleGoBack }) {
                 correct_answer={dataByCategory.correct_answer}
                 />
             )} */}
-            </div>
+            {/* </div> */}
         
         </div>
     )
